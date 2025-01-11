@@ -9,5 +9,5 @@ SESSION_ID: process.env.SESSION_ID,
 ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/JCByNJ4/adb435400eafa402.jpg",
 ALIVE_MSG: process.env.ALIVE_MSG || "Hellow, I am Kavidu Rasanga I am alive now...🌝",
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",   
-MODE: process.env.MODE || "public",    
+MODE: process.env.MODE || "public",  // inbox , groups , private , public
 };
