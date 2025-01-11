@@ -51,7 +51,7 @@ ${menu.search}
 
 𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔..💫
 `
-await conn.sendMessage(from,{text:madeMenu},{quoted:mek})
+await conn.sendMessage(from,{image:{url:""},caption:madeMenu},{quoted:mek})
   
 }catch(e){
 console.log(e)
