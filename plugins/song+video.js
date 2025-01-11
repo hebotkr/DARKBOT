@@ -17,7 +17,8 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `    
-💠 *DARKBOT SONG DOWNLOADER* 💠
+☢️ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ☢️
+
 
 title: ${data.title}
 description: ${data.description}
@@ -25,7 +26,8 @@ time: ${data.timestamp}
 ago: ${data.ago}
 views: ${data.views}
 
-POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💛
+
+💛 POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💛
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
