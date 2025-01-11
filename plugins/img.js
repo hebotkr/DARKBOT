@@ -1,6 +1,7 @@
-const { cmd } = require('../command');
-const axios = require('axios');
-const { Buffer } = require('buffer');
+const config = require('../config')
+const {cmd , commands} = require('../command')
+const { fetchJson } = require('../lib/functions')
+
 
 const GOOGLE_API_KEY = 'AIzaSyDebFT-uY_f82_An6bnE9WvVcgVbzwDKgU'; // Replace with your Google API key
 const GOOGLE_CX = '45b94c5cef39940d1'; // Replace with your Google Custom Search Engine ID
