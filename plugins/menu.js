@@ -26,6 +26,9 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
 }
 
 let madeMenu = `👏 *Hellow ${pushname}*
+
+💫𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞𝗕𝗢𝗧💫
+
 > *DOWNLOAD COMMANDS* ⬇️
 
 ${menu.download}
