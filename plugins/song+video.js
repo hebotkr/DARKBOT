@@ -17,17 +17,20 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `    
-☢️ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ☢️
+✨ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ✨
 
 
-title: ${data.title}
-description: ${data.description}
-time: ${data.timestamp}
-ago: ${data.ago}
-views: ${data.views}
+`🎶SONG DOWNLOADER...`
+┏━━━━━━━━━━━━━━━━━━━━━━☉➤
+┣*title:* ${data.title}
+┣*description:* ${data.description}
+┣*time:* ${data.timestamp}
+┣*ago:* ${data.ago}
+┣*views:* ${data.views}
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
 
-💛 POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💛
+POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💫
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
@@ -38,7 +41,7 @@ let downloadurl = down.dl_url
 
 //send audio + document message
 await conn.sendMessage(from,{audio: {url:downloadurl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadurl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"💛POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💛"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadurl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"`POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...`"},{quoted:mek})
 
 
 
@@ -65,17 +68,20 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `    
-☢️ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ☢️
+✨ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ✨
 
 
-title: ${data.title}
-description: ${data.description}
-time: ${data.timestamp}
-ago: ${data.ago}
-views: ${data.views}
+`🎬VIDEO DOWNLOADER...`
+┏━━━━━━━━━━━━━━━━━━━━━━━☉➤
+┣*title:* ${data.title}
+┣*description:* ${data.description}
+┣*time:* ${data.timestamp}
+┣*ago:* ${data.ago}
+┣*views:* ${data.views}
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
 
-💛 POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💛
+POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💫
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
