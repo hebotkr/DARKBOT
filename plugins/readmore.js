@@ -7,7 +7,6 @@ cmd({
     pattern: "readmore",
     desc: "Readmore message",
     category: "convert",
-    react: "📝",
     filename: __filename
 }, async (conn, mek, m, {
     from, quoted, body, isCmd, command, args, q, isGroup, sender
@@ -30,7 +29,7 @@ cmd({
 
     } catch (e) {
         console.log(e);
-        reply(`Error: ${e.message}`);
+        reply(`${e}`);
     }
 });
     
