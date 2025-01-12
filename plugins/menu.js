@@ -15,7 +15,8 @@ main: '',
 download: '',
 group: '',
 owner: '',
-convert: ''
+convert: '',
+news: ''
 };
 
 for (let i = 0; i < commands.length; i++) {
@@ -49,6 +50,10 @@ ${menu.owner}
 > *CONVERT COMMANDS* 🤌
 
 ${menu.convert}
+
+> *NEWS COMMANDA* 🌍
+
+${menu.news}
 
 
 
