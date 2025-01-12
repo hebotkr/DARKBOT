@@ -11,7 +11,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumner, botNumner2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title‼️")
+if(!q) return reply("please give me url or title‼..")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
@@ -69,7 +69,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumner, botNumner2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title‼️")
+if(!q) return reply("please give me url or title‼..")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
@@ -107,8 +107,6 @@ let downloadurl = down.dl_url
 //send video + document message
 await conn.sendMessage(from,{video: {url:downloadurl},mimetype:"video/mp4"},{quoted:mek})
 await conn.sendMessage(from,{document: {url:downloadurl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔"},{quoted:mek})
-
-
 
 
 
