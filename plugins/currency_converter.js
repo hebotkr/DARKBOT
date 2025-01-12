@@ -37,12 +37,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         conversionInfo += `🔄 *Converted Amount*: ${convertedAmount} ${toCurrency}\n`;
         conversionInfo += `📈 *Exchange Rate*: 1 ${fromCurrency} = ${data.rates[toCurrency]} ${toCurrency}\n
         
-*👨‍💻ɴᴀᴅᴇᴇɴ-ᴍᴅ ᴍᴀᴅᴇ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ👨‍💻*
+*𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💫*
         `;
 
         await conn.sendMessage(from, { text: conversionInfo }, { quoted: mek });
     } catch (e) {
         console.log(e);
-        reply(`*Error Fetching Data*: ${e.message}`);
+        reply(`${e}`);
     }
 });
