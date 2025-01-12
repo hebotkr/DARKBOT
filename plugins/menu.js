@@ -15,8 +15,7 @@ main: '',
 download: '',
 group: '',
 owner: '',
-convert: '',
-search: ''
+convert: ''
 };
 
 for (let i = 0; i < commands.length; i++) {
@@ -25,9 +24,11 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `👏 *Hellow ${pushname}*
+let madeMenu = `😉 *Hellow ${pushname}*
+
 
 💫𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞𝗕𝗢𝗧💫
+
 
 > *DOWNLOAD COMMANDS* ⬇️
 
@@ -53,7 +54,7 @@ ${menu.convert}
 
 ${menu.search}
 
-𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔..💫
+❬❬❀   P̴O̴W̴E̴R̴D̴ B̴Y̴ 𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀  ❀❯❯
 `
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
   
