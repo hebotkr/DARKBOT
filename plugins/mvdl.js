@@ -1,7 +1,6 @@
-//THIS PLUGIN BY Darksadas YT
-const config = require('../config')
-const { cmd, commands } = require('../command')
-const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
+const {readEnv} = require('../lib/database')
+const {cmd , commands} = require('../command')
+
 
 
 cmd({
@@ -9,7 +8,7 @@ cmd({
     alias: ["movi","tests"],
     use: '.movie <query>',
     desc: "Moive downloader",
-    category: "movie",
+    category: "main",
     filename: __filename
 
 },
