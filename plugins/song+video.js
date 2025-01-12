@@ -24,15 +24,15 @@ let desc = `
 ☉=====================☉
 
 ┏━━━━━━━━━━━━━━━━━━━━━━☉➤
-┃ ❁❱❱*title:* ${data.title}
+┃ ❁❱❱ *title:* ${data.title}
 ┃
-┃ ❁❱❱*description:* ${data.description}
+┃ ❁❱❱ *description:* ${data.description}
 ┃
-┃ ❁❱❱*time:* ${data.timestamp}
+┃ ❁❱❱ *time:* ${data.timestamp}
 ┃
-┃ ❁❱❱*ago:* ${data.ago}
+┃ ❁❱❱ *ago:* ${data.ago}
 ┃
-┃ ❁❱❱*views:* ${data.views}
+┃ ❁❱❱ *views:* ${data.views}
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
@@ -82,15 +82,15 @@ let desc = `
 ☉=====================☉
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━☉➤
-┃❁❱❱*title:* ${data.title}
+┃ ❁❱❱ *title:* ${data.title}
 ┃
-┃❁❱❱*description:* ${data.description}
+┃ ❁❱❱ *description:* ${data.description}
 ┃
-┃❁❱❱*time:* ${data.timestamp}
+┃ ❁❱❱ *time:* ${data.timestamp}
 ┃
-┃❁❱❱*ago:* ${data.ago}
+┃ ❁❱❱ *ago:* ${data.ago}
 ┃
-┃❁❱❱*views:* ${data.views}
+┃ ❁❱❱ *views:* ${data.views}
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
