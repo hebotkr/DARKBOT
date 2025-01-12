@@ -11,26 +11,33 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumner, botNumner2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title")
+if(!q) return reply("please give me url or title‼️")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
 
 let desc = `    
-✨ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ✨
+✨ *𝕐𝕋 𝕊𝕆ℕ𝔾 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𝔼ℝ* ✨
 
 
 🎶S̶O̶N̶G̶ D̶O̶W̶N̶L̶O̶A̶D̶E̶R̶...🎶
+☉=====================☉
+
 ┏━━━━━━━━━━━━━━━━━━━━━━☉➤
-┣*title:* ${data.title}
-┣*description:* ${data.description}
-┣*time:* ${data.timestamp}
-┣*ago:* ${data.ago}
-┣*views:* ${data.views}
+┃ ❁❱❱*title:* ${data.title}
+┃
+┃ ❁❱❱*description:* ${data.description}
+┃
+┃ ❁❱❱*time:* ${data.timestamp}
+┃
+┃ ❁❱❱*ago:* ${data.ago}
+┃
+┃ ❁❱❱*views:* ${data.views}
+┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
 
-POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💫
+❬❬❀   P̴O̴W̴E̴R̴D̴ B̴Y̴ 𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀  ❀❯❯
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
@@ -62,26 +69,33 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumner, botNumner2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("please give me url or title")
+if(!q) return reply("please give me url or title‼️")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
 
 let desc = `    
-✨ *𝗗𝗔𝗥𝗞𝗕𝗢𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥* ✨
+✨ *𝕐𝕋 𝕍𝕀𝔻𝔼𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𝔼ℝ* ✨
 
 
-🎬V̶I̶D̶E̶O̶ D̶O̶W̶N̶L̶O̶A̶D̶E̶R̶...🎬
+🎬S̴O̴N̴G̴ D̴O̴W̴N̴L̴O̴A̴D̴E̴R̴...🎬
+☉=====================☉
+
 ┏━━━━━━━━━━━━━━━━━━━━━━━☉➤
-┣*title:* ${data.title}
-┣*description:* ${data.description}
-┣*time:* ${data.timestamp}
-┣*ago:* ${data.ago}
-┣*views:* ${data.views}
+┃❁❱❱*title:* ${data.title}
+┃
+┃❁❱❱*description:* ${data.description}
+┃
+┃❁❱❱*time:* ${data.timestamp}
+┃
+┃❁❱❱*ago:* ${data.ago}
+┃
+┃❁❱❱*views:* ${data.views}
+┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━☉➤
 
 
-POWERD BY 𝗞𝗔𝗩𝗜𝗗𝗨_𝗥𝗔𝗦𝗔𝗡𝗚𝗔...💫
+❬❬❀   P̴O̴W̴E̴R̴D̴ B̴Y̴ 𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀  ❀❯❯
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
