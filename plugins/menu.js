@@ -16,7 +16,7 @@ download: '',
 group: '',
 owner: '',
 convert: '',
-tool: '',    
+tools: '',    
 news: ''
 };
 
@@ -58,9 +58,9 @@ ${menu.convert}
 
 ${menu.news}
 
-> *TOOL COMMANDS*
+> *TOOLS COMMANDS*
 
-${menu.tool}
+${menu.tools}
 
 ❀━━━━━━━━━━━━━━━━━━━━━━━━━━━━❀
 
