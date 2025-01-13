@@ -9,7 +9,7 @@ cmd({
     alias : "mvdl,sinhalasub,sinhalasublk",
     desc: "Search for a movie and get details and download options.",
     category: "movie",
-    react: "🔍",
+    react: "🎬",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -23,7 +23,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         let message = "Search Results:\n\n";
         result.results.forEach((item, index) => {
-            message += `*📽️NADEEN-MD MOVIE DOWNLOADER📽️* \n\n ${index + 1}. ${item.title}\nType: ${item.type}\nLink: ${item.link}\n\n`;
+            message += `*❀DARKBOT MOVIE DOWNLOADER❀* \n\n ${index + 1}. ${item.title}\nType: ${item.type}\nLink: ${item.link}\n\n`;
         });
 
         // Step 2: Send the search results to the user
@@ -31,13 +31,13 @@ async (conn, mek, m, { from, q, reply }) => {
             image: { url: `https://files.catbox.moe/2elpxs.png` },
             caption: message,  // Send the description as the caption
             contextInfo: {
-                mentionedJid: ['94716769285@s.whatsapp.net'], // specify mentioned JID(s) if any
+                mentionedJid: [''], // specify mentioned JID(s) if any
       groupMentions: [],
       forwardingScore: 1,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363304606757133@newsletter',
-          newsletterName: "NADEEN-MD™️",
+          newsletterJid: '',
+          newsletterName: "",
           serverMessageId: 999
     }
        }
@@ -81,14 +81,14 @@ async (conn, mek, m, { from, q, reply }) => {
 
             movieMessage += `⭐ 𝖨𝗆𝖽𝖻 𝖱𝖺𝗍𝗂𝗇𝗀: ${movie.IMDb_Rating}\n`;
             movieMessage += `🎬 𝖣𝗂𝗋𝖾𝖼𝗍𝗈𝗋: ${movie.director.name}\n\n`;
-            movieMessage += `📽️ Powered by: NADEEN POORNA\n\n`;
-          movieMessage += `乂 REPLY BELOW NUMBER\n\n`;
-          movieMessage += `1 | 𝖲𝖣 - 480𝗉 \n`;
-          movieMessage += `2 | 𝖧𝖣 - 720p \n`;
-          movieMessage += `3 | 𝖥𝖧𝖣 - 1080p\n\n`;
+            movieMessage += `📽️ Powered by: KAVIDU_RASANGA\n\n`;
+          movieMessage += `❖ REPLY BELOW NUMBER ❖\n\n`;
+          movieMessage += `1 ┃ 𝖲𝖣 - 480𝗉 \n`;
+          movieMessage += `2 ┃ 𝖧𝖣 - 720p \n`;
+          movieMessage += `3 ┃ 𝖥𝖧𝖣 - 1080p\n\n`;
   
           movieMessage += `📌️Join us : https://whatsapp.com/channel/0029VagN2qW3gvWUBhsjcn3I \n\n`;
-          movieMessage += `> *🎬NADEEN-MD🎬* `
+          movieMessage += `> *DARKBOT MOVIE* `
             const imageUrl = movie.images && movie.images.length > 0 ? movie.images[0] : null;
 
             // Step 4: Send movie details with download options
@@ -96,21 +96,21 @@ async (conn, mek, m, { from, q, reply }) => {
                 image: { url: imageUrl },
                 caption: movieMessage,
                 contextInfo: {
-                    mentionedJid: ['94716769285@s.whatsapp.net'], // specify mentioned JID(s) if any
+                    mentionedJid: [''], // specify mentioned JID(s) if any
       groupMentions: [],
       forwardingScore: 1,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363304606757133@newsletter',
-          newsletterName: "NADEEN-MD™️",
+          newsletterJid: '',
+          newsletterName: "",
           serverMessageId: 999
       },
       externalAdReply: {
-          title: 'NADEEN-MD',
-          body: 'NADEEN POORNA',
+          title: '',
+          body: '',
           mediaType: 1,
-          sourceUrl: "https://github.com/Nadeenpoorna-max/NADEEN-MD-V2",
-          thumbnailUrl: 'https://files.catbox.moe/2nmi9q.png', // This should match the image URL provided above
+          sourceUrl: "",
+          thumbnailUrl: 'https://i.postimg.cc/Vsx2ZLXB/Picsart-25-01-12-19-37-25-159.jpg', // This should match the image URL provided above
           renderLargerThumbnail: false,
           showAdAttribution: true
       }
@@ -155,8 +155,8 @@ async (conn, mek, m, { from, q, reply }) => {
                                     url: directLink
                                 },
                                 mimetype: 'video/mp4',
-                                fileName: `🎬NADEEN-MD🎬(${movie.title}).mp4`,
-                                caption: `${movie.title} - ${quality}\n\n> *📽️ɴᴀᴅᴇᴇɴ-ᴍᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ📽️* `
+                                fileName: `DARKBOT(${movie.title}).mp4`,
+                                caption: `${movie.title} - ${quality}\n\n> *DARKBOT BY KAVIDU_RASANGA * `
                             }, { quoted: mek });
 
                             // React with success
