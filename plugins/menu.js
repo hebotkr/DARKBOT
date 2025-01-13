@@ -16,6 +16,7 @@ download: '',
 group: '',
 owner: '',
 convert: '',
+tool: '',    
 news: ''
 };
 
@@ -28,7 +29,9 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
 let madeMenu = `👏 *Hellow ${pushname}*
 
 
-💫𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞𝗕𝗢𝗧💫
+> ❱❱❯ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞𝗕𝗢𝗧 ❮❰❰
+
+❀━━━━━━━━━━━━━━━━━━━━━━━━━━❀
 
 
 > *DOWNLOAD COMMANDS* ⬇️
@@ -51,11 +54,15 @@ ${menu.owner}
 
 ${menu.convert}
 
-> *NEWS COMMANDs* 🌍
+> *NEWS COMMANDS* 🌍
 
 ${menu.news}
 
+> *TOOL COMMANDS*
 
+${menu.tool}
+
+❀━━━━━━━━━━━━━━━━━━━━━━━━━━━━❀
 
 > ❬❬❀   P̴O̴W̴E̴R̴D̴ B̴Y̴ 𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀  ❀❯❯
 `
