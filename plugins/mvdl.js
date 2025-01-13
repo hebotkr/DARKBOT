@@ -28,7 +28,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         // Step 2: Send the search results to the user
         const sentMsg = await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/2elpxs.png` },
+            image: { url: `https://i.postimg.cc/Vsx2ZLXB/Picsart-25-01-12-19-37-25-159.jpg` },
             caption: message,  // Send the description as the caption
             contextInfo: {
                 mentionedJid: [''], // specify mentioned JID(s) if any
@@ -87,7 +87,7 @@ async (conn, mek, m, { from, q, reply }) => {
           movieMessage += `2 ┃ 𝖧𝖣 - 720p \n`;
           movieMessage += `3 ┃ 𝖥𝖧𝖣 - 1080p\n\n`;
   
-          movieMessage += `📌️Join us : https://whatsapp.com/channel/0029VagN2qW3gvWUBhsjcn3I \n\n`;
+          movieMessage += `\n\n`;
           movieMessage += `> *DARKBOT MOVIE* `
             const imageUrl = movie.images && movie.images.length > 0 ? movie.images[0] : null;
 
