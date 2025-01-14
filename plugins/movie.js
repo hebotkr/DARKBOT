@@ -15,7 +15,7 @@ const api_key = `Manul-Ofc-Sl-Sub-Key-9`;
 cmd({
     pattern: "sinhala",
     alias: ["slsub", "sinhalasub"],
-    react: '📑',
+    react: '😉',
     category: "download",
     desc: "Search movies on sinhalasub and get download links",
     filename: __filename
@@ -38,7 +38,7 @@ cmd({
         const searchResults = movieData.slice(0, 10);
 
         // Format and send the search results message
-        let resultsMessage = `📽️ *Search Results for* "${q}":\n\n`;
+        let resultsMessage = `📽️ *DARKBOT SEARCH REASULT➜ * "${q}":\n\n`;
         searchResults.forEach((result, index) => {
             const title = result.title || 'No title available';
             const link = result.link || 'No link available';
@@ -101,7 +101,7 @@ cmd({
                                 },
                                 mimetype: 'video/mp4',
                                 fileName: `${movieDetails.title} - ${selectedLink.quality}.mp4`,
-                                caption: `${movieDetails.title}\nQuality: ${selectedLink.quality}\n\n> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐘𝐝 𝐵𝐲 - : ©𝐌𝐑 𝐌𝐀𝐍𝐔𝐋 𝐎𝐅𝐂 💚*`
+                                caption: `${movieDetails.title}\nQuality: ${selectedLink.quality}\n\n> *𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗞𝗔𝗩𝗜𝗗𝗨 𝗥𝗔𝗦𝗔𝗡𝗚𝗔✨*`
                             }, { quoted: pdReply });
 
                     await conn.sendMessage(from, { react: { text: '✅', key: mek.key } });
