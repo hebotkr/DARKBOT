@@ -15,16 +15,15 @@ const api_key = `Manul-Ofc-Sl-Sub-Key-9`;
 cmd({
     pattern: "sinhala",
     alias: ["slsub", "sinhalasub"],
-    react: '😉',
+    react: '🤌',
     category: "download",
     desc: "Search movies on sinhalasub and get download links",
     filename: __filename
-    async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumner, botNumner2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-    try{
-    
+}, async (conn, m, mek, { from, isMe, isOwner, q, reply }) => {
+    try {
         // Check if search query is provided
         if (!q || q.trim() === '') return await reply('*Please provide a search query! (e.g., Deadpool)*');
-
+        if (!isMe && !isOwner) return await reply('*Only Bot Number Can Movie Download !!!*');
 
         // Fetch search results from API
         const manu = await fetchJson(`${domain}/api/sl-sub-search?query=${q}&apikey=${api_key}`);
