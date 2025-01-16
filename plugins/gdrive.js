@@ -93,7 +93,7 @@ reply(`\n🗂️  *DARKBOT GDRIVE DOWNLOADER*  🗂️
 *💈 File Size:* ${res.fileSize}
 *🕹️ File type:* ${res.mimetype}
 
-*DARKBOT,*\n*> POWERED BY KAVIDU RASANGA*`)		
+*DARKBOT,*\n> *POWERED BY KAVIDU RASANGA*`)		
 conn.sendMessage(jid, { document: { url: res.downloadUrl }, fileName: "🎬 DARKBOT DRIVE 🎬\n"+name, mimetype: res.mimetype , caption : "\n"+name+"\n\n> *𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗞𝗔𝗩𝗜𝗗𝗨 𝗥𝗔𝗦𝗔𝗡𝗚𝗔*"})
 } catch (e) {
 reply('*Error..! Your Url is Private. Please Public It*')
@@ -102,83 +102,3 @@ l(e)
 })
 
 
-cmd({
-    pattern: "moviekv",
-    react: "✔️",
-    desc: "Movie Searcher",
-    category: "movie",
-    use: '.activate_18+',
-    filename: __filename
-},
-async(conn, mek, m,{from, l, quoted, chat, body, isCmd, command, mentionByTag, db_pool, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
-try{
-if ( !q ) return 
-const data = q.split(" & ")[0] 
-const datas = q.split(" & ")[1] 
-      
-
- await conn.sendMessage(data, { document : { url : m.quoted.msg  } ,caption: `\n${datas}\n\n> *🎬 VAJIRA-MD 🎬*`  ,mimetype: "video/mkv" , fileName: `🎬 MOVIE DOWNLOADER 🎬\n${datas}.mkv` } )
-		} catch (e) {
-reply('❗ Error' + e )
-l(e)
-}
-})					    
-
-
-
-cmd({
-    pattern: "jts",
-    react: "✔️",
-    alias: ["jidtvsm"],
-    desc: "Movie Searcher",
-    category: "extra",
-    use: '.activate_18+',
-    dontAddCommandList : true ,
-    filename: __filename
-},
-async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag, db_pool, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
-try{
-if ( !q ) return reply('Add a item')
-if ( !isDev ) return reply('⚠️ ⚠️ *Contact owner to Active your number To Premium user*')
-	const db_pool = new DBM({
-    db: config.DATABASE_URL
-})
-
-const pjid = await db_pool.get(senderNumber + "UPJID")
-
-	await conn.sendMessage(pjid, { quoted: mek } )
-		} catch (e) {
-reply(e)
-l(e)
-}
-})
-
-
-
-cmd({
-    pattern: "myjid",
-    react: "✔️",
-    alias: ["mygpjid"],
-    desc: "Movie Searcher",
-    category: "extra",
-    use: '.activate_18+',
-    dontAddCommandList : true ,
-    filename: __filename
-},
-async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag, db_pool, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
-try{
- if ( !q ) return reply('Add a item')
-if ( !isDev ) return reply('⚠️ ⚠️ *Contact owner to Active your number To Premium user*')
-	const db_pool = new DBM({
-    db: config.DATABASE_URL
-})
-
-const ddll  = await db_pool.get(`${senderNumber}UPJID`)
-if ( q == ddll ) return reply('ℹ️ *Already Saved the jid on Database*')
-await db_pool.insert( senderNumber + "UPJID" , q ) 
-	return reply('✔️ *Successfully saved your Sending group Jid Adress*')
-		} catch (e) {
-await db_pool.insert( senderNumber + "UPJID"  , q ) 
-return reply('✔️ *Successfully saved your Sending group Jid Adress*')
-}
-})		
