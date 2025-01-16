@@ -29,6 +29,9 @@
     "@sl-code-lords/movie-api":"1.0.0",
     "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
     "@dark-yasiya/yt-dl.js": "latest",
-    "postgres_dbm" : "^1.1.0"
+    "postgres_dbm" : "^1.1.0",
+    "mime-types": "^2.1.35",
+    "mime-types": "latest",
+    "mrnima-moviedl":"latest"
   }
 }
