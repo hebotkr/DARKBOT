@@ -28,6 +28,7 @@
     "mongoose":"8.9.4",
     "@sl-code-lords/movie-api":"1.0.0",
     "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
-    "@dark-yasiya/yt-dl.js": "latest"
+    "@dark-yasiya/yt-dl.js": "latest",
+    "postgres_dbm" : "^1.1.0"
   }
 }
