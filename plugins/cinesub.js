@@ -113,7 +113,7 @@ async function get_dl_link(apilink) {
 
 cmd({
     pattern: "cines",	
-    react: '🔎',
+    react: '🤌',
     category: "download",
     desc: "cinesubz moive downloader",
     filename: __filename
