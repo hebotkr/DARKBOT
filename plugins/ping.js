@@ -24,14 +24,14 @@ async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sen
 try{
 const nima = require("@whiskeysockets/baileys")
 var inital = new Date().getTime();
-let ping = await conn.sendMessage(from , { text: '*ｐｉｎｎｉｎｇ . . ❕* '  } )
+let ping = await conn.sendMessage(from , { text: '`ｐｉｎｎｉｎｇ . . ❕` '  } )
 var final = new Date().getTime();
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■▢▢▢▢▢▢▢▢' , edit : ping.key })
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■▢▢▢▢▢▢' , edit : ping.key })
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■▢▢▢▢' , edit : ping.key })
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■■■▢▢' , edit : ping.key })
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■■■■■' , edit : ping.key })
-await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ Ｃｏｍｐｌｅｔｅ . . .❕' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■▢▢▢▢▢▢▢' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■▢▢▢▢▢' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■▢▢▢' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■■■▢' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ ■■■■■■■■■' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｌｏａｄｉｎｇ Ｃｏｍｐｌｅｔｅ . . .❄️' , edit : ping.key })
 
 /*var moviedl = [
 "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
@@ -48,7 +48,7 @@ await conn.sendMessage(from, {text: moviedl[i], edit: key })
 }  */
 
 	
-return await conn.sendMessage(from, { text : '😼 *𝘿𝙍𝙆 𝙥𝙞𝙣𝙜: ' + (final - inital) + ' Ms* ' , edit : ping.key })
+return await conn.sendMessage(from, { text : '😼 *𝘿𝙍𝙆 ｐｉｎｇ: ' + (final - inital) + ' Ms* ' , edit : ping.key })
 } catch (e) {
 reply('*Error !!*')
 l(e)
