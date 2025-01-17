@@ -32,6 +32,8 @@
     "postgres_dbm" : "^1.1.0",
     "mime-types": "^2.1.35",
     "mime-types": "latest",
-    "mrnima-moviedl":"latest"
+    "mrnima-moviedl":"latest",
+    "systeminformation":"^5.21.11",
+    "os": "^0.1.2"
   }
 }
