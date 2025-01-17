@@ -16,7 +16,7 @@ cmd({
     pattern: "sinhala",
     alias: ["slsub", "sinhalasub"],
     react: '🤌',
-    category: "download",
+    category: "owner",
     desc: "Search movies on sinhalasub and get download links",
     filename: __filename
 }, async (conn, m, mek, { from, isMe, isOwner, q, reply }) => {
