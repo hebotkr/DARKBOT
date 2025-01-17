@@ -9,7 +9,6 @@ const cheerio = require('cheerio')
 const fg = require('api-dylux');
 const si = require('systeminformation')
 const os = require('os')
-var { get_set , input_set } = require('../lib/set_db') 
 
 
 cmd({
