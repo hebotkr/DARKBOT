@@ -1,7 +1,8 @@
 const config = require('../config');
 const { cmd } = require('../command');
 const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js'); 
-
+const si = require('systeminformation')
+const os = require('os')
 
 cmd({
     pattern: "song",
@@ -14,7 +15,18 @@ cmd({
 },
 async(conn, mek, m,{ from, prefix, quoted, q, reply }) => {
 try{
+const nima = require("@whiskeysockets/baileys")
+var inital = new Date().getTime();
+let ping = await conn.sendMessage(from , { text: '*_Pinging Module..._* ❗'  } )
+var final = new Date().getTime();
+await conn.sendMessage(from, { text : '《 █▒▒▒▒▒▒▒▒▒▒▒》10%' , edit : ping.key })
+await conn.sendMessage(from, { text : '《 ████▒▒▒▒▒▒▒▒》30%' , edit : ping.key })
+await conn.sendMessage(from, { text : '《 ███████▒▒▒▒▒》50%' , edit : ping.key })
+await conn.sendMessage(from, { text : '《 ██████████▒▒》80%' , edit : ping.key })
+await conn.sendMessage(from, { text : '《 ████████████》100%' , edit : ping.key })
 
+
+	
 if(!q) return await reply("Please give me Yt-url or Name..!")
 	
 const yt = await ytsearch(q);
