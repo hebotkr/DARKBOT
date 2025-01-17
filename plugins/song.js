@@ -3,6 +3,7 @@ const { cmd } = require('../command');
 const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js'); 
 const si = require('systeminformation')
 const os = require('os')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, jsonformat} = require('../lib/functions')
 
 cmd({
     pattern: "song",
@@ -17,7 +18,7 @@ async(conn, mek, m,{ from, prefix, quoted, q, reply }) => {
 try{
 const nima = require("@whiskeysockets/baileys")
 var inital = new Date().getTime();
-let ping = await conn.sendMessage(from , { text: '*_Pinging Module..._* ❗'  } )
+let ping = await conn.sendMessage(from , { text: '*_Loading song..._* ❗'  } )
 var final = new Date().getTime();
 await conn.sendMessage(from, { text : '《 █▒▒▒▒▒▒▒▒▒▒▒》10%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ████▒▒▒▒▒▒▒▒》30%' , edit : ping.key })
