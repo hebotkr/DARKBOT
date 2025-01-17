@@ -47,7 +47,7 @@ await conn.sendMessage(from, {text: moviedl[i], edit: key })
 }  */
 
 	
-return await conn.sendMessage(from, { text : '📍️ *Pong ' + (final - inital) + ' Ms* ' , edit : ping.key })
+return await conn.sendMessage(from, { text : '😼 *Pong ' + (final - inital) + ' Ms* ' , edit : ping.key })
 } catch (e) {
 reply('*Error !!*')
 l(e)
