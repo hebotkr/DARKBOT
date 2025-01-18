@@ -1,6 +1,14 @@
 const cheerio = require("cheerio")
 
 
+cmd({
+    pattern: "mfire",
+    react: "🟥",
+    desc: "download meadia fire",
+    category: "download ",
+    filename: __filename
+},
+
     async function mfire(url) {
     return new Promise(async (resolve, reject) => {
         try {
