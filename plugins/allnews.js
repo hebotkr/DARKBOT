@@ -13,7 +13,7 @@ cmd({
     pattern: "itn",
     react: "📄",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -57,7 +57,7 @@ cmd({
     pattern: "hiru",
     react: "⭐",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -96,7 +96,7 @@ cmd({
     pattern: "lankadeepa",
     react: "😎",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -140,7 +140,7 @@ cmd({
     pattern: "siyatha",
     react: "📰",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -188,7 +188,7 @@ cmd({
     pattern: "sirasa",
     react: "💢",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -236,7 +236,7 @@ cmd({
     pattern: "ada",
     react: "🔊",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -286,7 +286,7 @@ cmd({
     pattern: "bbc",
     react: "🌌",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -334,7 +334,7 @@ cmd({
     pattern: "gagana",
     react: "✈",
     desc: "news",
-    category: "owner",
+    category: "news",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
