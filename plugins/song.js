@@ -6,7 +6,7 @@ const os = require('os')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, jsonformat} = require('../lib/functions')
 
 cmd({
-    pattern: "song,mp3",
+    pattern: "song",
     alias: ["play","ytsong"],
     react: "🎧",
     desc: "Download Youtube song",
