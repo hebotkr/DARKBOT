@@ -6,7 +6,7 @@ const os = require('os')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, jsonformat} = require('../lib/functions')
 
 cmd({
-    pattern: "song",
+    pattern: "song,mp3",
     alias: ["play","ytsong"],
     react: "🎧",
     desc: "Download Youtube song",
@@ -18,17 +18,18 @@ async(conn, mek, m,{ from, prefix, quoted, q, reply }) => {
 try{
 const nima = require("@whiskeysockets/baileys")
 var inital = new Date().getTime();
-let ping = await conn.sendMessage(from , { text: '*_Loading song..._* ❗'  } )
+let ping = await conn.sendMessage(from , { text: '*𝘱𝘭𝘦𝘢𝘴𝘦 𝘸𝘢𝘪𝘵𝘦. . .*'  } )
 var final = new Date().getTime();
 await conn.sendMessage(from, { text : '《 █▒▒▒▒▒▒▒▒▒▒▒》10%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ████▒▒▒▒▒▒▒▒》30%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ███████▒▒▒▒▒》50%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ██████████▒▒》80%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ████████████》100%' , edit : ping.key })
+await conn.sendMessage(from, { text : ' Ｄｏｗｎｌｏａｄｉｎｇ Ｙｏｕｒ Ｓｏｎｇ..' , edit : ping.key })
 
 
 	
-if(!q) return await reply("Please give me Yt-url or Name..!")
+if(!q) return await reply("Please give me Yt-url OR Name . . ❓")
 	
 const yt = await ytsearch(q);
 if(yt.results.length < 1) return reply("Results is not found..!")
