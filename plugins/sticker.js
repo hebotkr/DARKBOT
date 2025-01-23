@@ -12,7 +12,7 @@ if (config.LANG === 'SI') descg = 'එය ඔබගේ mention දුන් ඡ�
 else descg = 'ɪᴛ ᴄᴏɴᴠᴇʀᴛs ʏᴏᴜʀ ʀᴇᴘʟɪᴇᴅ ᴘʜᴏᴛᴏ ᴛᴏ sᴛɪᴄᴋᴇʀ.';
 
 cmd({
-    pattern: 'sticker',
+    pattern: 'stick',
     react: '🤹‍♀️',
     alias: ['s', 'stic'],
     desc: descg,
