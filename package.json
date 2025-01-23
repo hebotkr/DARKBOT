@@ -35,6 +35,6 @@
     "mrnima-moviedl":"latest",
     "systeminformation":"^5.21.11",
     "os": "^0.1.2",
-    "wa-sticker-formatter": "4.4.4"
+    "wa-sticker-formatter":"4.4.4"
   }
 }
