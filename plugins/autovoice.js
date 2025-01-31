@@ -14,7 +14,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
         if (body.toLowerCase() === text.toLowerCase()) {
             const config = await readEnv();
             if (config.AUTO_VOICE === 'true') {
-                //if (isOwner) return;        
+                if (isOwner) return;        
                 await conn.sendPresenceUpdate('recording', from);
                 await conn.sendMessage(from, { audio: { url: data[text] }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
             }

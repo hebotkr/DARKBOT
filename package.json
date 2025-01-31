@@ -28,6 +28,13 @@
     "mongoose":"8.9.4",
     "@sl-code-lords/movie-api":"1.0.0",
     "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
-    "@dark-yasiya/yt-dl.js": "latest"
+    "@dark-yasiya/yt-dl.js": "latest",
+    "postgres_dbm" : "^1.1.0",
+    "mime-types": "^2.1.35",
+    "mime-types": "latest",
+    "mrnima-moviedl":"latest",
+    "systeminformation":"^5.21.11",
+    "os": "^0.1.2",
+    "wa-sticker-formatter":"4.4.4"
   }
 }
