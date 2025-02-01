@@ -25,7 +25,7 @@ await conn.sendMessage(from, { text : '《 ████▒▒▒▒▒▒▒▒�
 await conn.sendMessage(from, { text : '《 ███████▒▒▒▒▒》50%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ██████████▒▒》80%' , edit : ping.key })
 await conn.sendMessage(from, { text : '《 ████████████》100%' , edit : ping.key })
-await conn.sendMessage(from, { text : ' ......' , edit : ping.key })
+await conn.sendMessage(from, { text : ' LOADING GYS......' , edit : ping.key })
 
 
 	
