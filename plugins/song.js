@@ -1,67 +1,116 @@
-const config = require('../config');
-const { cmd } = require('../command');
-const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js'); 
-const si = require('systeminformation')
-const os = require('os')
-const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, jsonformat} = require('../lib/functions')
+const { cmd, commands } = require("../command");
+const yts = require("yt-search");
+const { ytmp3 } = require("");
 
-cmd({
+cmd(
+  {
     pattern: "song",
-    alias: ["play","ytsong"],
-    react: "🎧",
-    desc: "Download Youtube song",
+    react: "🎵",
+    desc: "Download Song",
     category: "download",
-    use: '.song < Yt url or Name >',
-    filename: __filename
-},
-async(conn, mek, m,{ from, prefix, quoted, q, reply }) => {
-try{
-const nima = require("@whiskeysockets/baileys")
-var inital = new Date().getTime();
-let ping = await conn.sendMessage(from , { text: '*𝘱𝘭𝘦𝘢𝘴𝘦 𝘸𝘢𝘪𝘵𝘦. . .*'  } )
-var final = new Date().getTime();
-await conn.sendMessage(from, { text : '《 █▒▒▒▒▒▒▒▒▒▒▒》10%' , edit : ping.key })
-await conn.sendMessage(from, { text : '《 ████▒▒▒▒▒▒▒▒》30%' , edit : ping.key })
-await conn.sendMessage(from, { text : '《 ███████▒▒▒▒▒》50%' , edit : ping.key })
-await conn.sendMessage(from, { text : '《 ██████████▒▒》80%' , edit : ping.key })
-await conn.sendMessage(from, { text : '《 ████████████》100%' , edit : ping.key })
-await conn.sendMessage(from, { text : ' LOADING GYS......' , edit : ping.key })
+    filename: __filename,
+  },
+  async (
+    robin,
+    mek,
+    m,
+    {
+      from,
+      quoted,
+      body,
+      isCmd,
+      command,
+      args,
+      q,
+      isGroup,
+      sender,
+      senderNumber,
+      botNumber2,
+      botNumber,
+      pushname,
+      isMe,
+      isOwner,
+      groupMetadata,
+      groupName,
+      participants,
+      groupAdmins,
+      isBotAdmins,
+      isAdmins,
+      reply,
+    }
+  ) => {
+    try {
+      if (!q) return reply("*නමක් හරි ලින්ක් එකක් හරි දෙන්න* 🌚❤️");
+
+      // Search for the video
+      const search = await yts(q);
+      const data = search.videos[0];
+      const url = data.url;
+
+      // Song metadata description
+      let desc = `
+*❤️DARK SONG DOWNLOADER❤️*
 
 
-	
-if(!q) return await reply("Please give me Yt-url OR Name . . ❓")
-	
-const yt = await ytsearch(q);
-if(yt.results.length < 1) return reply("Results is not found..!")
-
-let yts = yt.results[0]  
-const ytdl = await ytmp3(yts.url)		
-let ytmsg = `
-🎶 DARKBOT SONG DOWNLOADER 🎶
-
-❀━━━━━━━━━━━━━━━━━━━━━━━━❀
-┃
-┃📄 *TITLE :* ${yts.title}
-┃
-┃🤵 *AUTHOR :* ${yts.author.name}
-┃
-┃⏳ *RUNTIME :* ${yts.timestamp}
-┃
-┃👀 *VIEWS :* ${yts.views}
-┃
-┃🖇️ *URL :* ${yts.url}
-┃
-❀━━━━━━━━━━━━━━━━━━━━━━━━❀
+👻 *title* : ${data.title}
+👻 *description* : ${data.description}
+👻 *time* : ${data.timestamp}
+👻 *ago* : ${data.ago}
+👻 *views* : ${data.views}
+👻 *url* : ${data.url}
 
 
-> *DARKBOT SONG*
-`
-await conn.sendMessage(from, { image: { url: yts.thumbnail || yts.image || '' }, caption: ytmsg }, { quoted: mek });
-await conn.sendMessage(from, { audio: { url: ytdl.download.url }, mimetype: "audio/mpeg" }, { quoted: mek })
-await conn.sendMessage(from, { document: { url: ytdl.download.url }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `> *POWERED BY KAVIDU RASANGA✨*` }, { quoted: mek })
+𝐌𝐚𝐝𝐞 𝐛𝐲 *𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀*  🎗️
+`;
 
-} catch (e) {
-console.log(e)
-reply(e)
-}}
-)
+      // Send metadata thumbnail message
+      await robin.sendMessage(
+        from,
+        { image: { url: data.thumbnail }, caption: desc },
+        { quoted: mek }
+      );
+
+      // Download the audio using @vreden/youtube_scraper
+      const quality = "128"; // Default quality
+      const songData = await ytmp3(url, quality);
+
+      // Validate song duration (limit: 30 minutes)
+      let durationParts = data.timestamp.split(":").map(Number);
+      let totalSeconds =
+        durationParts.length === 3
+          ? durationParts[0] * 3600 + durationParts[1] * 60 + durationParts[2]
+          : durationParts[0] * 60 + durationParts[1];
+
+      if (totalSeconds > 1800) {
+        return reply("⏱️ audio limit is 30 minitues");
+      }
+
+      // Send audio file
+      await robin.sendMessage(
+        from,
+        {
+          audio: { url: songData.download.url },
+          mimetype: "audio/mpeg",
+        },
+        { quoted: mek }
+      );
+
+      // Send as a document (optional)
+      await robin.sendMessage(
+        from,
+        {
+          document: { url: songData.download.url },
+          mimetype: "audio/mpeg",
+          fileName: `${data.title}.mp3`,
+          caption: "𝐌𝐚𝐝𝐞 𝐛𝐲 *𝐊𝐀𝐕𝐈𝐃𝐔 𝐑𝐀𝐒𝐀𝐍𝐆𝐀*  🎗️",
+        },
+        { quoted: mek }
+      );
+
+      return reply("*Thanks for using my bot* ❤️");
+    } catch (e) {
+      console.log(e);
+      reply(`❌ Error: ${e.message}`);
+    }
+  }
+);
